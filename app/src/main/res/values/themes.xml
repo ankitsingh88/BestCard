@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.AppCompat.DayNight.NoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
+
+        <item name="android:colorPrimary">@color/white</item>
+        <item name="android:colorBackground">@color/white</item>
+
+        <item name="android:navigationBarColor">?android:attr/colorPrimary</item>
+        <item name="android:windowLightNavigationBar">true</item>
+
+        <item name="android:statusBarColor">?android:attr/colorBackground</item>
+        <item name="android:windowLightStatusBar">true</item>
+
+    </style>
+
+</resources>

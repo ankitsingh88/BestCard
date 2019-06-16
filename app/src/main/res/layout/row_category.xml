@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/row_category"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/padding_xlarge"
+    android:background="?android:attr/colorBackground">
+
+    <LinearLayout
+        android:id="@+id/category_details_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/category_icon_container"
+            android:layout_width="@dimen/category_width"
+            android:layout_height="@dimen/category_height"
+            app:cardCornerRadius="@dimen/radius_medium_large">
+
+            <ImageView
+                android:id="@+id/category_icon"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="@dimen/padding_medium"
+                android:background="@drawable/icon_border"
+                android:src="@drawable/grocery_store"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <Space
+            android:id="@+id/category_row_vertical_space"
+            android:layout_width="@dimen/space_large"
+            android:layout_height="@dimen/category_height" />
+
+        <TextView
+            android:id="@+id/category_name"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="start|center_vertical"
+            android:padding="@dimen/padding_large"
+            android:textSize="@dimen/text_medium"
+            android:text="Groceries" />
+
+    </LinearLayout>
+
+</RelativeLayout>

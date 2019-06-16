@@ -1,0 +1,28 @@
+<resources>
+
+    <string name="app_name">Best Card</string>
+    <string name="title_home">Home</string>
+    <string name="title_cards">Cards</string>
+    <string name="title_categories">Categories</string>
+    <string name="title_settings">Settings</string>
+    <string name="search_hint">Type category</string>
+    <string name="lightFont">sans-serif-thin</string>
+    <string name="colon">:</string>
+    <string name="add_category">Add Category</string>
+    <string name="category_form_name_hint">Category Name</string>
+
+    <string name="visa">VISA</string>
+    <string name="mastercard">MasterCard</string>
+    <string name="amex">AMEX</string>
+    <string name="discover">Discover</string>
+
+    <string name="add_card">Add Card</string>
+    <string name="edit_card">Edit Card</string>
+    <string name="delete_card">Delete Card?</string>
+
+    <string name="add">Add</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="delete">Delete</string>
+
+</resources>

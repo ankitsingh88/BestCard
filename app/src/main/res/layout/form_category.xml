@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/category_form"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/padding_large">
+
+    <ImageView
+        android:id="@+id/category_form_icon"
+        android:layout_width="@dimen/category_width"
+        android:layout_height="@dimen/category_height"
+        android:padding="@dimen/padding_large"
+        android:tint="?android:attr/colorControlNormal"
+        android:src="@drawable/grocery_store"/>
+
+    <Space
+        android:id="@+id/category_form_vertical_space"
+        android:layout_width="@dimen/space_large"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/category_form_icon"
+        android:layout_alignTop="@id/category_form_icon"
+        android:layout_alignBottom="@id/category_form_icon"/>
+
+    <EditText
+        android:id="@+id/category_form_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/category_form_vertical_space"
+        android:layout_alignTop="@id/category_form_vertical_space"
+        android:layout_alignBottom="@id/category_form_vertical_space"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:gravity="center_vertical"
+        android:padding="@dimen/padding_large"
+        android:textSize="@dimen/text_medium"
+        android:inputType="text"
+        android:hint="@string/category_form_name_hint" />
+
+</RelativeLayout>

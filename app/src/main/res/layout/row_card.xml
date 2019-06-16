@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/row_card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/padding_xlarge"
+    android:background="?android:attr/selectableItemBackground"
+    android:clickable="true">
+
+    <LinearLayout
+        android:id="@+id/card_details_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_icon_container"
+            android:layout_width="@dimen/card_width"
+            android:layout_height="@dimen/card_height"
+            app:cardCornerRadius="@dimen/radius_medium">
+
+            <ImageView
+                android:id="@+id/card_icon"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:background="@drawable/icon_border"
+                android:src="@drawable/chase_freedom"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <Space
+            android:id="@+id/card_name_divider"
+            android:layout_width="@dimen/space_large"
+            android:layout_height="@dimen/card_height"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/card_height"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/card_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start|center_vertical"
+                android:paddingStart="@dimen/padding_large"
+                android:textStyle="normal"
+                android:textSize="@dimen/text_medium_large"
+                android:text="Chase Freedom" />
+
+            <TextView
+                android:id="@+id/card_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/padding_large"
+                android:gravity="start|center_vertical"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_small"
+                android:text="VISA" />
+
+            <TextView
+                android:id="@+id/card_multiplier"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/padding_large"
+                android:gravity="start|center_vertical"
+                android:textStyle="bold|italic"
+                android:textSize="@dimen/text_small"
+                android:text="x 1.5" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/card_expanded"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/card_details_container"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/card_rewards"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+
+        <LinearLayout
+            android:id="@+id/card_action_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/card_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?android:attr/selectableItemBackground"
+                android:paddingStart="@dimen/padding_medium"
+                android:tint="@color/selected_icon"
+                android:src="@drawable/delete"/>
+
+            <Space
+                android:id="@+id/card_action_divider"
+                android:layout_width="@dimen/space_large"
+                android:layout_height="match_parent" />
+
+            <ImageButton
+                android:id="@+id/card_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?android:attr/selectableItemBackground"
+                android:paddingStart="@dimen/padding_medium"
+                android:tint="@color/selected_icon"
+                android:src="@drawable/edit" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/card_expand_collapse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:background="?android:attr/selectableItemBackground"
+        android:tint="@color/selected_icon"
+        android:src="@drawable/expand"/>
+
+</RelativeLayout>
