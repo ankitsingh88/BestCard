@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/biometric_authentication"
+        android:title="@string/biometric_authentication"
+        app:actionLayout="@layout/biometric_authentication_selector"/>
+
+    <item
+        android:id="@+id/search_history"
+        android:title="@string/search_history"
+        app:actionLayout="@layout/search_history_selector"/>
+
+    <item
+        android:id="@+id/night_mode"
+        android:title="@string/dark_theme"
+        app:actionLayout="@layout/night_mode_selector"/>
+
+</menu>

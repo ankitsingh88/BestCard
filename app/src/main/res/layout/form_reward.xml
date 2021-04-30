@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/padding_xlarge">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/reward_form_category_container"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+        android:layout_width="@dimen/width_none"
+        android:layout_height="wrap_content"
+        android:hint="@string/edit_category"
+        android:padding="@dimen/padding_medium"
+        app:layout_constraintBottom_toTopOf="@+id/reward_form_reward_value_container"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:startIconDrawable="@drawable/category">
+
+        <AutoCompleteTextView
+            android:id="@+id/reward_form_category"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:editable="false"
+            android:textSize="@dimen/text_small_medium" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/reward_form_reward_value_container"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="@dimen/width_none"
+        android:layout_height="wrap_content"
+        android:hint="@string/edit_reward_value"
+        android:padding="@dimen/padding_medium"
+        app:layout_constraintBottom_toTopOf="@id/time_interval_selector_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/reward_form_category_container"
+        app:startIconDrawable="@drawable/reward"
+        app:suffixText=" %">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/reward_form_reward_value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:maxLines="1"
+            android:selectAllOnFocus="true"
+            android:textAlignment="textEnd"
+            android:textSize="@dimen/text_small_medium" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/time_interval_selector_text"
+        android:layout_width="@dimen/width_none"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/time_interval_selector"
+        android:layout_alignBottom="@id/time_interval_selector"
+        android:gravity="start|center_vertical"
+        android:layout_marginTop="@dimen/margin_xlarge"
+        android:padding="@dimen/padding_medium"
+        android:text="@string/time_bound"
+        android:textSize="@dimen/text_medium"
+        app:layout_constraintBottom_toTopOf="@+id/reward_form_time_interval_start_container"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/reward_form_reward_value_container" />
+
+
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/time_interval_selector"
+        android:layout_width="@dimen/width_none"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/time_interval_selector_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/time_interval_selector_text"
+        app:layout_constraintTop_toTopOf="@+id/time_interval_selector_text" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/reward_form_time_interval_start_container"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="@dimen/width_none"
+        android:layout_height="wrap_content"
+        android:hint="@string/date"
+        android:padding="@dimen/padding_medium"
+        app:helperText="@string/start_date"
+        app:layout_constraintEnd_toStartOf="@+id/reward_form_time_interval_end_container"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/time_interval_selector_text"
+        app:startIconDrawable="@drawable/calendar">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/reward_form_time_interval_start"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:inputType="date"
+            android:maxLines="1"
+            android:selectAllOnFocus="true"
+            android:textSize="@dimen/text_small" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/reward_form_time_interval_end_container"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="@dimen/width_none"
+        android:layout_height="wrap_content"
+        android:hint="@string/date"
+        android:padding="@dimen/padding_medium"
+        app:helperText="@string/end_date"
+        app:layout_constraintBottom_toBottomOf="@+id/reward_form_time_interval_start_container"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/reward_form_time_interval_start_container"
+        app:layout_constraintTop_toTopOf="@+id/reward_form_time_interval_start_container"
+        app:startIconDrawable="@drawable/calendar">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/reward_form_time_interval_end"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:inputType="date"
+            android:maxLines="1"
+            android:selectAllOnFocus="true"
+            android:textSize="@dimen/text_small" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,35 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/cards_fragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".fragments.CardsFragment">
 
+    <TextView
+        style="@style/TextAppearance.MaterialComponents.Headline5"
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:gravity="start|center"
+        android:paddingStart="@dimen/title_padding_start"
+        android:layout_margin="@dimen/margin_large"
+        android:textStyle="normal"
+        android:text="@string/title_cards"/>
+
+    <SearchView
+        android:id="@+id/search_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:layout_margin="@dimen/margin_large"
+        android:queryHint="@string/search_hint"
+        android:queryBackground="@null"/>
+
+    <TextView
+        android:id="@+id/hidden_title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/title"
+        android:gravity="center"
+        android:layout_margin="@dimen/hidden_title_margin"/>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/list_cards"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_below="@id/title"
+        android:paddingTop="@dimen/padding_large"
+        android:paddingBottom="@dimen/list_padding_bottom"
+        android:outlineProvider="bounds"
         android:clipToPadding="false"/>
-
-    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
-        android:id="@+id/card_add"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/margin_large"
-        android:layout_alignParentBottom="true"
-        android:layout_centerInParent="true"
-        android:theme="@style/Theme.MaterialComponents"
-        android:text="@string/add_card"
-        android:textAllCaps="false"
-        android:textColor="?android:attr/textColorPrimary"
-        app:layout_anchor="@id/list_cards"
-        app:layout_anchorGravity="bottom"
-        app:icon="@drawable/add"
-        app:iconPadding="@dimen/padding_large"
-        app:iconTint="?android:attr/colorControlNormal"
-        app:backgroundTint="@color/blue"/>
 
 </RelativeLayout>

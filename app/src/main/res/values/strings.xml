@@ -1,28 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Best Card</string>
-    <string name="title_home">Home</string>
-    <string name="title_cards">Cards</string>
-    <string name="title_categories">Categories</string>
-    <string name="title_settings">Settings</string>
+    <string name="app_name">Best card</string>
+    <string name="title_cards">Your cards</string>
+    <string name="title_card_repository">Card repository</string>
+    <string name="title_categories">Your categories</string>
+    <string name="card_repository_search_hint">Type card name</string>
     <string name="search_hint">Type category</string>
-    <string name="lightFont">sans-serif-thin</string>
-    <string name="colon">:</string>
-    <string name="add_category">Add Category</string>
-    <string name="category_form_name_hint">Category Name</string>
+
+    <string name="add">Add</string>
+    <string name="add_custom">Add custom card</string>
+    <string name="add_repository">Card repository</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="delete">Delete</string>
+    <string name="disable">Disable</string>
+    <string name="enable">Enable</string>
+    <string name="ok">Okay</string>
+
+    <string name="select_cards">Select cards</string>
+
+    <string name="edit_card_name">Card name</string>
+    <string name="edit_card_type">Card type</string>
+    <string name="edit_annual_fees">Annual fees</string>
+    <string name="edit_multiplier">Multiplier</string>
+    <string name="add_tag">Add tag</string>
+
+    <string name="edit_category">Category</string>
+    <string name="edit_reward_value">Value</string>
+
+    <string name="search">Search</string>
+    <string name="settings">Settings</string>
+    <string name="biometric_authentication">Biometric authentication</string>
+    <string name="search_history">Search history</string>
+    <string name="clear_suggestions">Clear</string>
+    <string name="dark_theme">Dark theme</string>
+    <string name="night_mode_dark">On</string>
+    <string name="night_mode_light">Off</string>
+    <string name="night_mode_auto">Auto</string>
 
     <string name="visa">VISA</string>
     <string name="mastercard">MasterCard</string>
     <string name="amex">AMEX</string>
     <string name="discover">Discover</string>
 
-    <string name="add_card">Add Card</string>
-    <string name="edit_card">Edit Card</string>
-    <string name="delete_card">Delete Card?</string>
+    <string name="card_details">Card details</string>
+    <string name="card_rewards">Card rewards</string>
 
-    <string name="add">Add</string>
-    <string name="save">Save</string>
-    <string name="cancel">Cancel</string>
-    <string name="delete">Delete</string>
+    <string name="time_bound">Time bound?</string>
+    <string name="start_date">Start date</string>
+    <string name="end_date">End date</string>
+    <string name="date">mm/dd/yyyy</string>
 
 </resources>

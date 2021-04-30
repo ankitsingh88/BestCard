@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="Theme.AppCompat.DayNight.NoActionBar" parent="Theme.AppCompat.NoActionBar">
+    <style name="Theme.NoActionBar" parent="Theme.MaterialComponents.DayNight.NoActionBar">
 
-        <item name="android:colorPrimary">@color/black</item>
-        <item name="android:colorBackground">@color/black</item>
+        <item name="colorPrimary">#BB86FC</item>
+        <item name="colorPrimaryDark">#BB86FC</item>
+        <item name="colorSecondary">#BB86FC</item>
+        <item name="chipIconTint">?android:attr/colorPrimary</item>
 
-        <item name="android:navigationBarColor">?android:attr/colorPrimary</item>
+        <item name="android:navigationBarColor">@color/elevatedColorBackground</item>
         <item name="android:windowLightNavigationBar">false</item>
 
         <item name="android:statusBarColor">?android:attr/colorBackground</item>

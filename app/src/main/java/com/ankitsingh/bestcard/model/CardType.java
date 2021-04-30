@@ -4,5 +4,5 @@ public enum CardType {
     VISA,
     MASTERCARD,
     AMEX,
-    DISCOVER;
+    DISCOVER
 }

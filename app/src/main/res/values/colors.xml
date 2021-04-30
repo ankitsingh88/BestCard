@@ -1,12 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <color name="darkGrey">#222222</color>
-    <color name="black">#121212</color>
-
-    <color name="lightGrey">#F9F9F9</color>
     <color name="white">#FFFFFF</color>
+    <color name="dark">#121212</color>
+    <color name="elevatedDark">#2D2D2D</color>
+    <color name="black">#000000</color>
 
-    <color name="blue">#4285F4</color>
+    <color name="dim">#40414F</color>
+    <color name="dimOnSurface">#40414F</color>
+
+    <color name="colorDisabled">#777777</color>
+
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#BB86FC</color>
+
+    <color name="colorPrimaryIconSelected">#CC6200EE</color>
+    <color name="colorPrimaryIconToSelect">#446200EE</color>
+
+    <color name="colorPrimaryText">#996200EE</color>
+
+    <color name="colorPrimaryItemSelected">#226200EE</color>
+
+    <color name="colorBackground">@color/white</color>
+    <color name="elevatedColorBackground">@color/white</color>
 
 </resources>

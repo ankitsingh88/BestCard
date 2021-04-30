@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+  <item>
+    <shape
+        android:shape="rectangle">
+      <size
+          android:width="@dimen/card_width"
+          android:height="@dimen/card_height"
+          />
+    </shape>
+  </item>
+  <item
+      android:width="@dimen/custom_card_width"
+      android:height="@dimen/custom_card_height"
+      android:gravity="center"
+      android:drawable="@drawable/card" />
+</layer-list>

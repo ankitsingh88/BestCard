@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/card_form_appbarlayout"
+        android:layout_width="@dimen/width_none"
+        android:layout_height="wrap_content"
+        app:elevation="@dimen/elevation_none"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/card_form_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorBackground"
+            android:elevation="@dimen/elevation_none"
+            android:paddingStart="@dimen/padding_large"
+            android:paddingEnd="@dimen/padding_large"
+            app:contentInsetStartWithNavigation="@dimen/inset_none"
+            app:menu="@menu/form_card_actions"
+            app:navigationIcon="@drawable/close"
+            app:title="Edit card?" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_icon_container"
+        android:layout_width="@dimen/card_edit_width"
+        android:layout_height="@dimen/card_edit_height"
+        android:layout_margin="@dimen/margin_xlarge"
+        app:cardCornerRadius="@dimen/radius_medium_large"
+        app:cardElevation="@dimen/elevation_small"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card_form_appbarlayout">
+
+        <ImageView
+            android:id="@+id/card_icon"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/edit_card" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/card_details_text"
+        android:layout_width="@dimen/width_none"
+        android:layout_height="wrap_content"
+        android:gravity="start|center_vertical"
+        android:padding="@dimen/padding_large"
+        android:layout_margin="@dimen/margin_xlarge"
+        android:text="@string/card_details"
+        android:textSize="@dimen/text_medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card_icon_container" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/card_form_card_type_container"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+        android:layout_width="@dimen/width_none"
+        android:layout_height="wrap_content"
+        android:hint="@string/edit_card_type"
+        android:padding="@dimen/padding_medium"
+        android:layout_marginStart="@dimen/margin_xlarge"
+        android:layout_marginEnd="@dimen/margin_xlarge"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card_details_text"
+        app:startIconDrawable="@drawable/card">
+
+        <AutoCompleteTextView
+            android:id="@+id/card_form_card_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:editable="false"
+            android:textSize="@dimen/text_small_medium" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/card_form_annual_fees_container"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="@dimen/width_none"
+        android:layout_height="wrap_content"
+        android:hint="@string/edit_annual_fees"
+        android:padding="@dimen/padding_medium"
+        android:layout_marginStart="@dimen/margin_xlarge"
+        app:layout_constraintEnd_toStartOf="@+id/card_form_multiplier_container"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card_form_card_type_container"
+        app:prefixText="$ ">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/card_form_annual_fees"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:inputType="number"
+            android:maxLines="1"
+            android:selectAllOnFocus="true"
+            android:textSize="@dimen/text_small_medium" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/card_form_multiplier_container"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="@dimen/width_none"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_xlarge"
+        android:hint="@string/edit_multiplier"
+        android:padding="@dimen/padding_medium"
+        app:layout_constraintBottom_toBottomOf="@+id/card_form_annual_fees_container"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/card_form_annual_fees_container"
+        app:layout_constraintTop_toTopOf="@+id/card_form_annual_fees_container"
+        app:prefixText="x ">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/card_form_multiplier"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:inputType="numberDecimal"
+            android:maxLines="1"
+            android:selectAllOnFocus="true"
+            android:textSize="@dimen/text_small_medium" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/card_rewards_details_text"
+        android:layout_width="@dimen/width_none"
+        android:layout_height="wrap_content"
+        android:gravity="start|center_vertical"
+        android:padding="@dimen/padding_large"
+        android:layout_marginStart="@dimen/margin_xlarge"
+        android:layout_marginTop="@dimen/margin_xlarge"
+        android:text="@string/card_rewards"
+        android:textSize="@dimen/text_medium"
+        app:layout_constraintEnd_toStartOf="@+id/card_reward_add"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card_form_annual_fees_container" />
+
+    <ImageButton
+        android:id="@+id/card_reward_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:padding="@dimen/padding_medium"
+        android:layout_marginEnd="@dimen/margin_xlarge"
+        android:src="@drawable/add"
+        android:tint="?android:attr/colorControlNormal"
+        app:layout_constraintBottom_toBottomOf="@+id/card_rewards_details_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/card_rewards_details_text"
+        app:layout_constraintTop_toTopOf="@+id/card_rewards_details_text" />
+
+    <RelativeLayout
+        android:id="@+id/list_card_rewards_container"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/end_space"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card_rewards_details_text">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/list_card_rewards"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/margin_xlarge"
+            android:layout_marginEnd="@dimen/margin_xlarge"
+            android:clipToPadding="false"
+            android:fadeScrollbars="false"
+            android:nestedScrollingEnabled="true"
+            android:outlineProvider="bounds"
+            android:scrollbars="vertical" />
+
+    </RelativeLayout>
+
+    <Space
+        android:id="@+id/end_space"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dialog_padding_bottom"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/list_card_rewards_container" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

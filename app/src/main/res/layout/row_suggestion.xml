@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/row_suggestion"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/padding_xlarge"
+    android:background="?android:attr/colorBackground">
+
+    <TextView
+        android:id="@+id/suggestion_name"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="start|center_vertical"
+        android:padding="@dimen/padding_large"
+        android:textSize="@dimen/text_medium"
+        android:text="Groceries" />
+
+</RelativeLayout>

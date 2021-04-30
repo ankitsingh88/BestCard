@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.button.MaterialButtonToggleGroup
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/night_mode_selector_group"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:singleSelection="true">
+
+    <com.google.android.material.button.MaterialButton
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:id="@+id/night_mode_dark"
+        android:layout_width="@dimen/icon_size_xxlarge"
+        android:layout_height="wrap_content"
+        app:icon="@drawable/on"
+        app:iconTint="@color/colorPrimary"/>
+
+    <com.google.android.material.button.MaterialButton
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:id="@+id/night_mode_light"
+        android:layout_width="@dimen/icon_size_xxlarge"
+        android:layout_height="wrap_content"
+        app:icon="@drawable/off"
+        app:iconTint="@color/colorPrimary"/>
+
+    <com.google.android.material.button.MaterialButton
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:id="@+id/night_mode_auto"
+        android:layout_width="@dimen/icon_size_xxlarge"
+        android:layout_height="wrap_content"
+        app:icon="@drawable/auto"
+        app:iconTint="@color/colorPrimary"/>
+
+</com.google.android.material.button.MaterialButtonToggleGroup>

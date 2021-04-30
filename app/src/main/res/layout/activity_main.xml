@@ -1,37 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<androidx.coordinatorlayout.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_activity"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".BestCardActivity">
 
-    <SearchView
-        android:id="@+id/search_bar"
+    <FrameLayout
+        android:id="@+id/main_fragment"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/search_height"
-        android:layout_margin="@dimen/padding_xlarge"
-        android:queryHint="@string/search_hint"
-        app:queryBackground="@android:color/transparent" />
+        android:layout_height="match_parent"/>
 
-    <androidx.viewpager.widget.ViewPager
-        android:id="@+id/activity_pager"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/search_bar"
-        android:layout_above="@id/bottom_navigation"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
-
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottom_navigation"
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bottom_app_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:background="?android:attr/colorPrimary"
-        app:itemTextColor="@color/selected_text"
-        app:itemIconTint="@color/selected_icon"
-        app:labelVisibilityMode="auto"
-        app:menu="@menu/bottom_nav_menu" />
+        android:layout_gravity="bottom"
+        app:elevation="@dimen/elevation_large"
+        app:background="?android:colorBackground"
+        app:fabAlignmentMode="center"
+        app:fabAnimationMode="slide"
+        app:navigationIcon="@drawable/menu"
+        app:menu="@menu/bottom_options">
 
-</RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                style="@style/TextAppearance.MaterialComponents.Headline6"
+                android:id="@+id/bottom_app_bar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding_large"
+                android:paddingStart="@dimen/title_padding_start"/>
+
+        </RelativeLayout>
+
+    </com.google.android.material.bottomappbar.BottomAppBar>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/bottom_app_bar_action"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/add"
+        app:tint="@color/white"
+        app:borderWidth="@dimen/width_none"
+        app:layout_anchor="@id/bottom_app_bar"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

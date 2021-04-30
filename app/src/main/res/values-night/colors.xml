@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="white">#FFFFFF</color>
+    <color name="dark">#121212</color>
+    <color name="elevatedDark">#2D2D2D</color>
+    <color name="black">#000000</color>
+
+    <color name="dim">#060514</color>
+    <color name="dimOnSurface">#0C0B1A</color>
+
+    <color name="colorDisabled">#777777</color>
+
+    <color name="colorPrimary">#BB86FC</color>
+    <color name="colorPrimaryDark">#BB86FC</color>
+
+    <color name="colorPrimaryIconSelected">#CCBB86FC</color>
+    <color name="colorPrimaryIconToSelect">#44BB86FC</color>
+
+    <color name="colorPrimaryText">#99BB86FC</color>
+
+    <color name="colorPrimaryItemSelected">#22BB86FC</color>
+
+    <color name="colorBackground">@color/dark</color>
+    <color name="elevatedColorBackground">@color/elevatedDark</color>
+
+</resources>

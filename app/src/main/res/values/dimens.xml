@@ -1,32 +1,71 @@
 <resources>
 
+    <dimen name="width_none">0dp</dimen>
     <dimen name="width_tiny">1dp</dimen>
+    <dimen name="width_small">2dp</dimen>
 
+    <dimen name="height_none">0dp</dimen>
+    <dimen name="height_tiny">1dp</dimen>
     <dimen name="height_small">2dp</dimen>
+    <dimen name="height_medium">4dp</dimen>
+    <dimen name="height_large">8dp</dimen>
+    <dimen name="height_xxxlarge">24dp</dimen>
 
-    <dimen name="inset_large">8dp</dimen>
+    <dimen name="icon_size_small">20dp</dimen>
+    <dimen name="icon_size_medium">24dp</dimen>
+    <dimen name="icon_size_large">28dp</dimen>
+    <dimen name="icon_size_xlarge">36dp</dimen>
+    <dimen name="icon_size_xxlarge">56dp</dimen>
+    <dimen name="icon_size_xxxlarge">72dp</dimen>
 
+    <dimen name="elevation_none">0dp</dimen>
+    <dimen name="elevation_tiny">1dp</dimen>
+    <dimen name="elevation_small">2dp</dimen>
+    <dimen name="elevation_medium">4dp</dimen>
+    <dimen name="elevation_large">8dp</dimen>
+    <dimen name="elevation_xlarge">12dp</dimen>
+
+    <dimen name="inset_none">0dp</dimen>
+
+    <dimen name="padding_none">0dp</dimen>
     <dimen name="padding_small">2dp</dimen>
     <dimen name="padding_medium">4dp</dimen>
     <dimen name="padding_large">8dp</dimen>
     <dimen name="padding_xlarge">12dp</dimen>
     <dimen name="padding_xxlarge">16dp</dimen>
+    <dimen name="padding_xxxlarge">24dp</dimen>
+    <dimen name="padding_xxxxlarge">32dp</dimen>
 
+    <dimen name="padding_large_icon">32dp</dimen>
+
+    <dimen name="margin_none">0dp</dimen>
     <dimen name="margin_small">2dp</dimen>
     <dimen name="margin_medium">4dp</dimen>
     <dimen name="margin_large">8dp</dimen>
+    <dimen name="margin_xlarge">12dp</dimen>
+    <dimen name="margin_xxlarge">16dp</dimen>
+    <dimen name="margin_bottom_bar">60dp</dimen>
 
     <dimen name="space_small">2dp</dimen>
     <dimen name="space_medium">4dp</dimen>
     <dimen name="space_large">8dp</dimen>
+    <dimen name="space_xlarge">12dp</dimen>
+    <dimen name="space_xxlarge">16dp</dimen>
 
-    <dimen name="card_width">96dp</dimen>
+    <dimen name="card_width">98dp</dimen>
     <dimen name="card_height">60dp</dimen>
+
+    <dimen name="card_edit_width">148dp</dimen>
+    <dimen name="card_edit_height">90dp</dimen>
+
+    <dimen name="custom_card_width">42dp</dimen>
+    <dimen name="custom_card_height">42dp</dimen>
 
     <dimen name="category_width">56dp</dimen>
     <dimen name="category_height">56dp</dimen>
 
-    <dimen name="search_height">48dp</dimen>
+    <dimen name="reward_width">42dp</dimen>
+    <dimen name="reward_height">42dp</dimen>
 
     <dimen name="text_tiny">8sp</dimen>
     <dimen name="text_tiny_small">10sp</dimen>
@@ -35,10 +74,21 @@
     <dimen name="text_medium">16sp</dimen>
     <dimen name="text_medium_large">18sp</dimen>
     <dimen name="text_large">20sp</dimen>
+    <dimen name="text_large_xlarge">22sp</dimen>
+    <dimen name="text_xlarge">24sp</dimen>
 
+    <dimen name="radius_none">0dp</dimen>
     <dimen name="radius_small">2dp</dimen>
     <dimen name="radius_medium">4dp</dimen>
     <dimen name="radius_medium_large">6dp</dimen>
     <dimen name="radius_large">8dp</dimen>
+
+    <dimen name="list_padding_bottom">96dp</dimen>
+
+    <dimen name="title_padding_start">64dp</dimen>
+
+    <dimen name="hidden_title_margin">96dp</dimen>
+
+    <dimen name="dialog_padding_bottom">8dp</dimen>
 
 </resources>

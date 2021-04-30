@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_repository_fragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.CardsFragment">
+
+    <SearchView
+        android:id="@+id/search_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:layout_margin="@dimen/margin_large"
+        android:queryHint="@string/card_repository_search_hint"
+        android:queryBackground="@null"/>
+
+    <TextView
+        style="@style/TextAppearance.MaterialComponents.Headline5"
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:gravity="start|center"
+        android:paddingStart="@dimen/title_padding_start"
+        android:layout_margin="@dimen/margin_large"
+        android:textStyle="normal"
+        android:text="@string/title_card_repository"/>
+
+    <TextView
+        android:id="@+id/hidden_title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/title"
+        android:gravity="center"
+        android:layout_margin="@dimen/hidden_title_margin"/>
+
+    <include
+        layout="@layout/row_card_add"
+        android:id="@+id/card_add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:paddingTop="@dimen/padding_large"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/list_cards"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/card_add"
+        android:paddingBottom="@dimen/list_padding_bottom"
+        android:outlineProvider="bounds"
+        android:clipToPadding="false"/>
+
+</RelativeLayout>

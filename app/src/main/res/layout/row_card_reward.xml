@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/category_details_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/padding_medium"
+    android:paddingBottom="@dimen/padding_medium">
+
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:id="@+id/card_reward_enabled"
+        android:layout_width="@dimen/width_none"
+        android:layout_height="wrap_content"
+        android:minWidth="@dimen/width_none"
+        android:minHeight="@dimen/height_none"
+        app:layout_constraintBottom_toBottomOf="@+id/category_icon_container"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/category_icon_container" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/category_icon_container"
+        android:layout_width="@dimen/reward_width"
+        android:layout_height="@dimen/reward_height"
+        android:layout_toEndOf="@id/card_reward_enabled"
+        android:layout_margin="@dimen/margin_medium"
+        app:cardCornerRadius="@dimen/radius_medium"
+        app:cardElevation="@dimen/elevation_small"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/card_reward_enabled"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/category_icon"
+            android:layout_width="@dimen/reward_width"
+            android:layout_height="@dimen/reward_height"
+            android:layout_toEndOf="@id/card_reward_enabled"
+            android:backgroundTint="?android:attr/colorControlNormal"
+            android:padding="@dimen/padding_medium"
+            android:src="@drawable/grocery_store" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/category_name"
+        android:layout_width="@dimen/width_none"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_large"
+        android:gravity="start|center_vertical"
+        android:text="Groceries"
+        android:textSize="@dimen/text_medium"
+        app:layout_constraintStart_toEndOf="@+id/category_icon_container"
+        app:layout_constraintTop_toTopOf="@+id/category_icon_container" />
+
+    <TextView
+        android:id="@+id/card_reward_value"
+        android:layout_width="@dimen/width_none"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_large"
+        android:gravity="start|center_vertical"
+        android:text="5 %"
+        android:textSize="@dimen/text_small"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/category_icon_container"
+        app:layout_constraintStart_toEndOf="@+id/category_icon_container" />
+
+    <TextView
+        android:id="@+id/card_reward_interval"
+        android:layout_width="@dimen/width_none"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_large"
+        android:gravity="start|center_vertical"
+        android:text="Oct - Dec"
+        android:textSize="@dimen/text_small"
+        app:layout_constraintBottom_toBottomOf="@+id/card_reward_value"
+        app:layout_constraintStart_toEndOf="@+id/card_reward_value" />
+
+    <ImageButton
+        android:id="@+id/card_reward_edit"
+        android:layout_width="@dimen/width_none"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:layout_marginEnd="@dimen/margin_large"
+        android:padding="@dimen/padding_small"
+        android:src="@drawable/edit"
+        android:tint="?android:attr/colorControlNormal"
+        app:layout_constraintBottom_toBottomOf="@+id/card_reward_interval"
+        app:layout_constraintEnd_toStartOf="@+id/card_reward_delete"
+        app:layout_constraintTop_toTopOf="@+id/category_name" />
+
+    <ImageButton
+        android:id="@+id/card_reward_delete"
+        android:layout_width="@dimen/width_none"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:padding="@dimen/padding_small"
+        android:src="@drawable/delete"
+        android:tint="?android:attr/colorControlNormal"
+        app:layout_constraintBottom_toBottomOf="@+id/card_reward_edit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/card_reward_edit"
+        app:layout_constraintVertical_bias="0.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
